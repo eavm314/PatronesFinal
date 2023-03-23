@@ -54,7 +54,7 @@ public abstract class Celular {
 
     public void showInfo() {
         System.out.println("Version Android: "+getAndroidVersion());
-        System.out.println("Memoria RAM: "+getMemoriaRam());
-        System.out.println("Precio: "+getPrecio());
+        System.out.println("Memoria RAM: "+getMemoriaRam()+"GB");
+        System.out.println("Precio: "+getPrecio()+"$");
     }
 }
