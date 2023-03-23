@@ -33,12 +33,6 @@ public abstract class Composite implements IComponent{
         this.poa = poa;
     }
 
-    @Override
-    public int getHabitantes() {
-        habitantes = components.stream().mapToInt(IComponent::getHabitantes).sum();
-        return habitantes;
-    }
-
     public Composite add(IComponent c){
         components.add(c);
         return this;
@@ -47,5 +41,11 @@ public abstract class Composite implements IComponent{
     public Composite remove(IComponent c){
         components.remove(c);
         return this;
+    }
+
+    @Override
+    public int getHabitantes() {
+        habitantes = components.stream().mapToInt(IComponent::getHabitantes).sum();
+        return habitantes;
     }
 }

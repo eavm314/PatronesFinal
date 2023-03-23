@@ -34,4 +34,9 @@ public class Zona implements IComponent{
     public int getHabitantes() {
         return habitantes;
     }
+
+    @Override
+    public void showInfo() {
+        System.out.println("Habitantes en la zona "+nombre+": "+getHabitantes());
+    }
 }
